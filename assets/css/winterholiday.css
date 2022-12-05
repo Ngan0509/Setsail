@@ -1,0 +1,590 @@
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Slider */
+
+.slider__full {
+    position: relative;
+}
+
+.slider__full-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 55px;
+    background-color: #fff;
+    border-radius: 50px;
+    display: grid;
+    place-items: center;
+    border: none;
+    outline: none;
+    color: var(--primary-color);
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.slider__full-btn.prev {
+    left: 25px;
+    z-index: 1;
+}
+
+.slider__full-btn.next {
+    right: 25px;
+}
+
+.slider__full-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.slider__full-child {
+    position: relative;
+    display: none;
+    animation: opacity 1s linear;
+}
+
+.slider__full-child.show {
+    display: block;
+    animation: opacity 0.8s linear;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.slider__full-child-img {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+}
+
+.slider__full-child-img img {
+    animation: scale 5s ease forwards;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.slider__full-child-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+@keyframes fade {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slider__full-child-text h2 {
+    font-family: Satisfy, cursive;
+    font-size: 40px;
+    font-weight: 500;
+    font-style: italic;
+    animation: fade 0.7s ease;
+}
+
+.slider__full-child-text h3 {
+    font-size: 115px;
+    font-weight: 600;
+    line-height: 1;
+    animation: fade 1.2s ease;
+}
+
+.slider__full-child-text p {
+    width: 57%;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 24px;
+    animation: fadeDesc 2s ease;
+}
+
+@keyframes fadeDesc {
+    from {
+        transform: translateY(150%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slider__move {
+    margin-top: 24px;
+}
+
+.slider__move-child {
+    box-shadow: 1px 3px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Jquery css------------------------------------------------
+
+.slick-dots {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.slick-dots button {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(63, 208, 212, 0.5);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.slick-dots .slick-active button {
+    background-color: rgb(63, 208, 212);
+}
+
+.slick-dots li {
+    margin-right: 16px;
+}
+
+.slick-dots li:nth-child(3) {
+    display: none;
+} */
+
+.slider__move-child-img {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+}
+
+.slider__move-child-img img {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.slider__move-child-img img:hover {
+    transform: scale(1.05);
+}
+
+.slider__move-child-info {
+    height: 40px;
+    width: 100%;
+    background-color: #3fd0d4;
+    display: flex;
+    align-items: center;
+    padding: 0 26px;
+}
+
+.slider__move-child-info span {
+    color: #fff;
+    font-size: 14px;
+    margin-right: 16px;
+}
+
+.slider__move-child-info .wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.slider__move-child-info .wrap::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.slider__move-child-info .wrap:hover::after {
+    width: 100%;
+}
+
+.slider__move-child-info span i {
+    margin-right: 8px;
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+    color: #fff;
+}
+
+.slider__move-child-content {
+    padding: 25px 30px;
+}
+
+.slider__move-child-content h4 {
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--title-color);
+}
+
+.slider__move-child-content p {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.slider__move-child-content-consider span {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--title-color);
+    margin-right: 16px;
+}
+
+/* Container ------------------------------------ */
+
+.container__content-title {
+    padding: 100px 0 47px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container__content-title h3 {
+    font-family: Satisfy,cursive;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.container__content-title h2 {
+    font-size: 65px;
+    font-weight: 600;
+    color: var(--title-color);
+}
+
+.container__content-title p {
+    font-size: 18px;
+    color: var(--text-color);
+    width: 40%;
+    text-align: center;
+}
+
+.container__winter-sport {
+    max-width: 750px;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0 12px;
+    text-align: center;
+}
+
+.container__winter-sport-video {
+    position: relative;
+}
+
+.container__winter-sport-video-icon-pause {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container__winter-sport-desc {
+    margin-top: 26px;
+}
+
+.container__winter-sport-desc p {
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.container__winter-sport-btn a {
+    width: 220px;
+    display: block;
+    padding: 18px 66px;
+    color: #fff;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    margin: 26px auto;
+}
+
+.container__top-review {
+    padding: 108px 0;
+    background-image: url(https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/skiing-parallax-1.jpg);
+    background-position: 50% -303px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container__top-review-title {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 535px;
+    width: 90vw;
+    color: #fff;
+}
+
+.container__top-review-title h2 {
+    font-size: 65px;
+    font-weight: 600;
+}
+
+.container__top-review-title p {
+    font-size: 18px;
+}
+
+
+.container__top-review-wrap {
+    margin-top: 30px;
+}
+
+.container__top-review-child {
+    width: 100%;
+    height: 230px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.container__top-review-child-img {
+    width: 107px;
+    height: 107px;
+    float: left;
+}
+
+.container__top-review-child-info {
+    padding-left: 128px;
+}
+
+.container__top-review-child-info h4 a {
+    color: var(--title-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.container__top-review-child-info p {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-top: 8px;
+}
+
+.container__top-review-child-info h6 {
+    font-size: 14px;
+    margin-top: 16px;
+    color: var(--title-color);
+}
+
+.container__top-review-child-info-favour i {
+    color: var(--primary-color);
+}
+
+.container__top-review-child-info-favour {
+    margin-top: 8px;
+}
+
+.container__winter-holiday-where {
+    width: 1130px;
+    margin: 0 auto;
+    padding-bottom: 163px;
+}
+
+.container__winter-holiday-where-child {
+    text-align: center;
+    padding: 0 45px;
+}
+
+.container__winter-holiday-where-child h4 {
+    margin-top: 27px;
+    color: var(--title-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.container__winter-holiday-where-child p {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-top: 16px;
+}
+
+.container__winter-holiday-where-child-img {
+    width: 76px;
+    height: 78px;
+    margin: 0 auto;
+    transform: translateY(0);
+}
+
+.container__winter-holiday-where-child-img img {
+    transition: 0.5s;
+}
+
+.container__winter-holiday-where-child-img img:hover {
+    transform: translateY(-10px);
+}
+
+
+.container__tourist {
+
+}
+
+.container__tourist-slider {
+
+}
+
+.container__tourist-slider-child {
+    position: relative;
+}
+
+.container__tourist-slider-child-img {
+    width: 100%;
+    height: 476px;
+}
+
+.container__tourist-slider-child-info {
+    padding: 24px;
+    background-color: var(--primary-color);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    transform: translateY(0%);
+    transition: 0.5s;
+}
+
+.container__tourist-slider-child:hover .container__tourist-slider-child-info {
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(-100%);
+}
+
+.container__tourist-slider-child-info h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.container__tourist-slider-child-info p {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.container__tourist-slider-child-info-social a {
+    font-size: 20px;
+    color: #fff;
+    margin: 0 8px;
+    transition: 0.5s;
+}
+
+.container__tourist-slider-child-info-social a:hover {
+    color: #2f9296;
+}
+
+.container__tourist-count-wrap {
+    background-color: #3abdc1;
+    position: relative;
+    z-index: 2;
+}
+
+.container__tourist-count {
+    height: 246px;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.count-child {
+    color: #fff;
+    display: grid;
+    place-items: center;
+    padding-top: 72px;
+}
+
+.count-child p {
+    font-size: 65px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.count-child span {
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+.container__winter-resort {
+    padding-bottom: 170px;
+}
+
+.container__winter-resort-wrap {
+    width: 1130px;
+    margin: 0 auto;
+}
+
+.container__winter-resort-child {
+    margin: 0 35px;
+}
+
+.container__winter-resort-child-img {
+    width: 313px;
+    height: 313px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.container__winter-resort-child-img a {
+    display: block;
+    position: relative;
+}
+
+.container__winter-resort-child-img img {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.container__winter-resort-child-img a:hover img {
+    transform: scale(1.05);
+}
+
+.container__winter-resort-child-title {
+    font-family: Satisfy,cursive;
+    font-size: 40px;
+    color: #fff;
+    font-style: italic;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: grid;
+    place-items: center;
+}
+
