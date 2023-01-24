@@ -1,41 +1,41 @@
 const reviewList = [
     {
-        image: 'https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/user-img-7.png',
+        image: '../assets/image/user-img-7.png',
         titleName: 'Holland Canals',
         desc: 'Sa etor aviues lmpedlt tes, vof ef nihc agem qupaios. Ai apvy',
         author: 'Ema Cooper',
     },
 
     {
-        image: 'https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/user-img-4.png',
+        image: '../assets/image/user-img-4.png',
         titleName: 'Taipei',
         desc: 'Pe utor aviuas lwpadit tas, vut et nihc egam yubulas. Si euvy',
         author: 'Susan Day',
     },
 
     {
-        image: 'https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/user-img-3.png',
+        image: '../assets/image/user-img-3.png',
         titleName: 'Kaohsiung',
         desc: 'Fa etor eviuas lwqedit tas, vut et nihc egam yubulas. Ei euvy ',
         author: 'Roger Brooks',
     },
 
     {
-        image: 'https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/user-img-2.png',
+        image: '../assets/image/user-img-2.png',
         titleName: 'Barcelona',
         desc: 'Fa etor eviuas lwqedit tas, vut et nihc egam yubulas. Ei euvy',
         author: 'James Fisher ',
     },
 
     {
-        image: 'https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/user-img-6.png',
+        image: '../assets/image/user-img-6.png',
         titleName: 'Madrid',
         desc: 'Pe ator eviuas lwqedit tas, vut et nihc egam yubulas. Ei euvy ',
         author: 'Sam Smith',
     },
 
     {
-        image: 'https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/user-img-5.png',
+        image: '../assets/image/user-img-5.png',
         titleName: 'Tarragona',
         desc: 'Fa etor eviuas lwqedit tas, vut et nihc egam yubulas. Ei euvy',
         author: 'Carl Moore',
